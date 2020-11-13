@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="registerVM"
+            type="com.craft.furniture.ui.registration.RegistrationViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_padding"
+            tools:context=".ui.login.LoginActivity">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/app_name"
+                android:paddingHorizontal="@dimen/padding_medium"
+                android:paddingVertical="@dimen/padding_small"
+                android:background="@drawable/box_background"
+                android:textSize="@dimen/text_size_large"
+                android:textColor="?attr/textColorLight"
+                app:layout_constraintBottom_toTopOf="@+id/sign_up_text_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sign_up_text_tv"
+                android:text="@string/text_btn_sign_up"
+                android:textColor="?attr/textColorLight"
+                android:layout_marginBottom="30dp"
+                android:textSize="@dimen/text_size_large"
+                app:layout_constraintBottom_toTopOf="@+id/registration_card"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/registration_card"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_et"
+                        android:layout_width="0dp"
+                        android:text="@={registerVM.name}"
+                        android:hint="@string/hint_enter_name"
+                        errorText="@{registerVM.errorName}"
+                        android:drawableStart="@drawable/ic_name_24"
+                        android:layout_height="@dimen/height_edit_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        style="@style/EditTextStyle"/>
+
+                    <View
+                        android:id="@+id/line1"
+                        android:layout_marginHorizontal="@dimen/margin_divider_horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/name_et"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        style="@style/DividerStyle"/>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_et"
+                        android:layout_width="0dp"
+                        android:text="@={registerVM.email}"
+                        android:hint="@string/hint_enter_email"
+                        errorText="@{registerVM.errorEmail}"
+                        android:inputType="textEmailAddress"
+                        android:drawableStart="@drawable/ic_email_24"
+                        android:layout_height="@dimen/height_edit_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/line1"
+                        style="@style/EditTextStyle"/>
+
+                    <View
+                        android:id="@+id/line2"
+                        android:layout_marginHorizontal="@dimen/margin_divider_horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/email_et"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        style="@style/DividerStyle"/>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/password_et"
+                        android:layout_width="0dp"
+                        android:text="@={registerVM.password}"
+                        android:inputType="textPassword"
+                        android:hint="@string/hint_enter_password"
+                        android:layout_height="@dimen/height_edit_text"
+                        errorText="@{registerVM.errorPassword}"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:drawableStart="@drawable/ic_password_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/line2"
+                        style="@style/EditTextStyle"/>
+
+                    <View
+                        android:id="@+id/line3"
+                        android:layout_marginHorizontal="@dimen/margin_divider_horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/password_et"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        style="@style/DividerStyle"/>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone_et"
+                        android:layout_width="0dp"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        errorText="@{registerVM.errorMobile}"
+                        android:text="@={registerVM.mobile}"
+                        android:hint="@string/hint_enter_mobile_number"
+                        android:drawableStart="@drawable/ic_phone_24"
+                        android:layout_height="@dimen/height_edit_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/line3"
+                        style="@style/EditTextStyle"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_btn"
+                android:id="@+id/reset_btn"
+                app:cornerRadius="0dp"
+                android:onClick="@{()->registerVM.onResetBtnClicked()}"
+                app:backgroundTint="?attr/btnColorBack"
+                android:text="@string/text_btn_reset"
+                android:layout_marginEnd="@dimen/margin_medium"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintEnd_toStartOf="@+id/sign_up_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registration_card"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_btn"
+                app:cornerRadius="0dp"
+                android:onClick="@{()->registerVM.onSignUpBtnClicked()}"
+                app:backgroundTint="?attr/btnColorBack"
+                android:text="@string/text_btn_sign_up"
+                android:id="@+id/sign_up_btn"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintStart_toEndOf="@+id/reset_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/registration_card"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/linked_in_iv"
+                android:src="@drawable/ic_linkedin"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/margin_large"
+                app:layout_constraintBottom_toTopOf="@+id/line4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_btn"
+                app:layout_constraintVertical_bias="1"
+                style="@style/IconViewStyle"/>
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:src="@drawable/ic_facebook"
+                android:layout_marginEnd="@dimen/margin_large_extra"
+                app:layout_constraintEnd_toStartOf="@+id/linked_in_iv"
+                android:layout_marginBottom="@dimen/margin_large"
+                app:layout_constraintBottom_toTopOf="@+id/line4"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_btn"
+                app:layout_constraintVertical_bias="1"
+                style="@style/IconViewStyle"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:src="@drawable/ic_twitter"
+                android:layout_marginStart="@dimen/margin_large_extra"
+                app:layout_constraintStart_toEndOf="@+id/linked_in_iv"
+                android:layout_marginBottom="@dimen/margin_large"
+                app:layout_constraintBottom_toTopOf="@+id/line4"
+                app:layout_constraintTop_toBottomOf="@+id/sign_up_btn"
+                app:layout_constraintVertical_bias="1"
+                style="@style/IconViewStyle"/>
+
+            <View
+                android:id="@+id/line4"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginHorizontal="@dimen/margin_divider_horizontal"
+                android:background="?attr/textColorLight"
+                app:layout_constraintBottom_toTopOf="@+id/need_help_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                style="@style/DividerStyle"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/need_help_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/need_help"
+                android:textColor="?attr/textColorLight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

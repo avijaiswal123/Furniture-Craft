@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="textColorDark"  format="reference"/>
+    <attr name="backColorLight" format="reference"/>
+    <attr name="backColorDark"  format="reference"/>
+    <attr name="dividerBack"    format="reference"/>
+    <attr name="tintDrawable"   format="reference"/>
+    <attr name="btnColorBack"   format="reference"/>
+    <attr name="textColorLight" format="reference"/>
+    <attr name="snackBarColor"  format="reference"/>
+</resources>

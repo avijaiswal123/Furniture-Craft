@@ -1,0 +1,76 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">?attr/backColorDark</item>
+
+        <item name="textColorDark">@color/text_color_dark </item>
+        <item name="backColorLight">@color/back_color_light </item>
+        <item name="backColorDark"> @color/back_color_dark</item>
+        <item name="dividerBack">@color/divider_back </item>
+        <item name="tintDrawable">@color/tint_drawable </item>
+        <item name="btnColorBack">@color/btn_color_back </item>
+        <item name="textColorLight">@color/text_color_light </item>
+        <item name="snackBarColor">@color/snack_bar_color </item>
+
+    </style>
+    <style name="CornerShape" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+
+
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="EditTextStyle" parent="">
+        <item name="android:padding">@dimen/padding_text</item>
+        <item name="android:background">@drawable/editext_background</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="IconViewStyle" parent="">
+        <item name="android:layout_width">@dimen/width_height_icon</item>
+        <item name="android:layout_height">@dimen/width_height_icon</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:padding">@dimen/padding_min</item>
+        <item name="android:background">?attr/backColorLight</item>
+    </style>
+
+    <style name="DividerStyle" parent="">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="alpha">.5</item>
+        <item name="android:background">?attr/dividerBack</item>
+    </style>
+
+    <style name="TitleTextViewStyle" parent="">
+        <item name="android:fontFamily">@font/dancing_script</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:layout_marginStart">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginEnd">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/margin_top</item>
+    </style>
+
+    <style name="SimpleTextViewStyle" parent="">
+        <item name="android:fontFamily">@font/dancing_script</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?attr/textColorDark</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:layout_marginStart">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginEnd">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+    </style>
+
+
+</resources>

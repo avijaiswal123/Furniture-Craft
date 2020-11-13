@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Furniture Craft</string>
+
+    <string name="internet_exception_msg">No Internet.</string>
+    <string name="api_exception_msg">Something went wrong. Please try again later.</string>
+    <string name="something_went_wrong">Something Went wrong. Please try again later.</string>
+    <string name="no_internet">Check your internet connection.</string>
+    <string name="enter_valid_name">Enter valid name</string>
+    <string name="enter_valid_mobile">Enter valid mobile no.</string>
+    <string name="enter_valid_password">Enter valid password</string>
+    <string name="enter_dob">Enter dob</string>
+    <string name="enter_valid_email">Enter valid email.</string>
+    <string name="enter_valid_user_id">Enter valid User id</string>
+    <string name="hint_enter_name">Enter Name</string>
+    <string name="hint_enter_email">Enter Email</string>
+    <string name="hint_enter_password">Enter Password</string>
+    <string name="hint_enter_mobile_number">Enter Mobile Number</string>
+    <string name="text_btn_reset">RESET</string>
+    <string name="text_btn_sign_up">Sign Up</string>
+    <string name="need_help">Need Help?</string>
+    <string name="feature_title_text">Feature And Details</string>
+    <string name="color">Color</string>
+    <string name="weight">Item Weight</string>
+    <string name="dimension">Dimension</string>
+    <string name="ship_weight">Shipment Weight</string>
+    <string name="material">Primary Material</string>
+    <string name="product_description_text">Product Description</string>
+    <string name="in_stock_msg">In Stock. Available Cash on Delivery</string>
+    <string name="active_network_msg">You are online</string>
+    <string name="in_active_network_msg">you are offline now !</string>
+
+</resources>
