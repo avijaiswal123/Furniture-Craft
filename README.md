@@ -1,8 +1,8 @@
 # Furniture-Craft
 
 Introduction.
-Furniture Craft is a project to displays list of Furnitures and its description to showcase MVVM architectural approaches to developing Android apps.
 
+Furniture Craft is a project to displays list of Furnitures and its description to showcase MVVM architectural approaches to developing Android apps.
 
 In this app you'll find:
 
